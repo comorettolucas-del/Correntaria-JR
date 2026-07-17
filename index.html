@@ -79,6 +79,40 @@
     border-color: #454545;
   }
 
+  .quote-card {
+    background: linear-gradient(135deg, #241c0f, #1a1a1a 70%);
+    border: 1px solid #4a3b1f;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+  }
+  .quote-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .quote-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .quote-value span {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 4px;
+  }
+  .quote-updated {
+    margin-top: 6px;
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
   .card {
     background: var(--panel);
     border: 1px solid #3a3a3a;
@@ -232,10 +266,14 @@
     </div>
   </header>
 
-  <div class="card">
-    <label for="silverPrice">Preço da prata hoje (R$ por grama)</label>
-    <input type="text" id="silverPrice" placeholder="ex: 19,80" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*">
+  <div class="quote-card">
+    <div class="quote-label">Cotação do dia</div>
+    <div class="quote-value">R$ 19,70<span>/g</span></div>
+    <div class="quote-updated">Atualizado em 16/07/2026</div>
+    <input type="hidden" id="silverPrice" value="19.70">
+  </div>
 
+  <div class="card">
     <label for="refInput">Código do produto</label>
     <div id="refList">
       <input type="text" id="refInput" placeholder="digite a referência, ex: AGVE02" autocomplete="off">
